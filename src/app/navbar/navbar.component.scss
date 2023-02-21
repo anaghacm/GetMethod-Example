@@ -1,0 +1,51 @@
+@import '../../assets/scss/variables';
+
+.navbar {
+
+    background-color: $color-darkblue;
+
+    .logo-icon {
+        font-size: $font-title;
+        color: $color-contrasting;
+    }
+
+    .nav-item {
+        padding: $spacer-2 $spacer-4;
+    }
+
+    .nav-link {
+        color: $color-contrasting;
+        font-weight: 400;
+        font-size: $font-md;
+        display: inline-block;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: $color-contrasting;
+            transform-origin: bottom right;
+            transition: transform 0.5s ease-out;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+    }
+
+    .active {
+        font-weight: 500;
+    }
+
+    .navbar-nav {
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}

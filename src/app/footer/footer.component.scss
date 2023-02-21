@@ -1,0 +1,11 @@
+@import '../../assets/scss/variables';
+
+.footer-module{
+    background-color: $color-darkblue;
+    color: $color-contrasting;
+    text-align: center;
+    font-size: $font-sm;
+    font-weight: 300;
+    padding-top: $spacer-2;
+    padding-bottom: $spacer-2;
+}
